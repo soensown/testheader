@@ -6,6 +6,74 @@
 </head>
 <body>
     <nav th:replace="~{/header/Navbar}"></nav>
-    <nav th:replace="~{/component/chart}"></nav>
+
+    <div class="container mt-4">
+        <h2 class="mb-4">Dashboard</h2>
+        <p class="text-muted">anything you need</p>
+        <nav th:replace="~{/component/chart}"></nav>
+        <!-- Status Cards -->
+        <div class="row text-white mb-4">
+            <div class="col-md-4">
+                <div class="p-3 bg-success rounded">
+                    <strong th:text="${newOrders}">57</strong> đơn hàng mới<br/>
+                    <small>đang chờ được xử lý</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 bg-warning text-dark rounded">
+                    <strong th:text="${onHoldOrders}">5</strong> đơn hàng<br/>
+                    <small>đang giữ</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-3 bg-danger rounded">
+                    <strong th:text="${outOfStock}">15</strong> Sản phẩm<br/>
+                    <small>hết hàng</small>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-body-secondary mb-6 mt-4">
+        <!-- Order & Customer Summary -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Total Orders</h5>
+                    <p class="display-6" th:text="${totalOrders}">16,247</p>
+                    <small class="text-danger">-6.8% trong 7 ngày</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>New Customers</h5>
+                    <p class="display-6" th:text="${newCustomers}">356</p>
+                    <small class="text-success">+26.5% trong 7 ngày</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coupon & Paying customers -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Top Coupons</h5>
+                    <div class="progress mb-2">
+                        <div class="progress-bar bg-primary" role="progressbar" th:style="'width:' + ${couponUsage} + '%'" aria-valuemin="0" aria-valuemax="100">Percentage: <span th:text="${couponUsage}">72</span>%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3">
+                    <h5>Paying vs Non-paying</h5>
+                    <div class="d-flex justify-content-between">
+                        <span>Paying: <strong th:text="${payingCustomerPercent} + '%'">30%</strong></span>
+                        <span>Non-paying: <strong th:text="(100 - ${payingCustomerPercent}) + '%'">70%</strong></span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" th:style="'width:' + ${payingCustomerPercent} + '%'" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
