@@ -1,0 +1,10 @@
+/* Hiện dropdown khi hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Xử lý đóng các dropdown khác */
+.navbar .dropdown-menu {
+    display: none;
+}
