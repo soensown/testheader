@@ -17,6 +17,17 @@ public class ServiceController {
         model.addAttribute("newCustomers", 356);
         model.addAttribute("couponUsage", 72);
         model.addAttribute("payingCustomerPercent", 30);
-        return "/component/Overview";
+        return "/page/Overview";
+    }
+    @GetMapping("/")
+    public String listProduct(Model model){
+        model.addAttribute("newOrders", 57);
+        model.addAttribute("onHoldOrders", 5);
+        model.addAttribute("outOfStock", 15);
+        model.addAttribute("totalOrders", 16247);
+        model.addAttribute("newCustomers", 356);
+        model.addAttribute("couponUsage", 72);
+        model.addAttribute("payingCustomerPercent", 30);
+        return "/page/Overview";
     }
 }
