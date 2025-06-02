@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh;
+    font-family: sans-serif;
+    background-image: url('/static/Img/body.png'); /* Đường dẫn đúng */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.splide__slide {
+    height: 200px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 10px;
+}

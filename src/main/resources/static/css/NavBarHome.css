@@ -1,0 +1,46 @@
+
+
+.sticky-title {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    z-index: 1000;
+}
+
+.sticky-title.scrolled {
+    top: 10px;
+    font-size: 30px;
+    color: #222;
+}
+.navbar-tille.scrolled {
+    background-color: rgba(255, 255, 255, 0.95); /* nền sau khi cuộn */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar-tille {
+    transition: background-color 0.3s ease;
+    background-color: transparent;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+
+.navbar-tille .nav-link,
+.navbar-tille .navbar-brand {
+    color: white; /* Màu chữ ban đầu */
+    transition: color 0.3s ease;
+}
+
+
+.navbar-tille.scrolled .nav-link,
+.navbar-tille.scrolled .navbar-brand {
+    color: black; /* Màu chữ sau khi cuộn */
+}
