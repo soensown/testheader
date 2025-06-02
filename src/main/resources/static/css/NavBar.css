@@ -8,3 +8,8 @@
 .navbar .dropdown-menu {
     display: none;
 }
+.navbar{
+    position: fixed;
+    text-decoration: none;
+
+}
