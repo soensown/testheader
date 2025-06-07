@@ -4,12 +4,48 @@
     margin-top: 0;
 }
 
+/* Hiệu ứng hover */
+.nav-item a:hover, .dropdown-menu li a:hover {
+    background-color: #cccccc;
+}
 /* Xử lý đóng các dropdown khác */
 .navbar .dropdown-menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #eeeeee;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 150px;
+}
+.dropdown-menu li a {
+    padding: 10px 15px;
+    color: gray;
+    display: block;
 }
 .navbar{
     position: fixed;
     text-decoration: none;
-
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    z-index: 999;
+}
+.nav-item {
+    position: relative;
+}
+.nav-item a {
+    color: gray;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
