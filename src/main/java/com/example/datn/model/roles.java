@@ -1,4 +1,3 @@
-package com.example.datn.model;
-
+package com.example.datn.Model;
 public class roles {
 }

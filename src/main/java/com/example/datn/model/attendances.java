@@ -1,4 +1,4 @@
-package com.example.datn.model;
+package com.example.datn.Model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
