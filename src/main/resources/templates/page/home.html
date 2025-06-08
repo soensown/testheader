@@ -69,6 +69,20 @@
     });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+<th:block th:each="listProducts : ${listsHoaDon}">
+    <tr>
+        <td th:text="${listProducts.brand.brandName}"></td>
+        <td th:text="${listsHoaDon.ngayMuaHang}"></td>
+        <td th:text="${listsHoaDon.nhanVien.ten}"></td>
+        <td th:text="${listsHoaDon.khachHang.ten}"></td>
+        <td th:text="${listsHoaDon.trangThai == 1?'active':'none'}"></td>
+        <td>
+            <a th:href="@{|/HoaDon/detail/${listsHoaDon.id}|}">DETAIL</a>
+            <a th:href="@{|/HoaDon/update/${listsHoaDon.id}|}">UPDATE</a>
+        </td>
+
+    </tr>
+</th:block>
 </body>
 
 </html>
