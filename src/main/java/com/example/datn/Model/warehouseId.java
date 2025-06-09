@@ -12,7 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class WarehouseId implements Serializable {
+public class warehouseId implements Serializable {
     @Column(name = "product_detail_id", insertable = false, updatable = false)
     private Integer productId;
     @Column(name = "warehouse_id", insertable = false, updatable = false)

@@ -23,7 +23,7 @@ public class order_items {
     private orders order;
     @ManyToOne
     @JoinColumn(name = "product_detail_id",referencedColumnName = "id")
-    private Products product;
+    private products product;
     @Column(name = "quantity")
     private Integer quantity;
     @Column(name = "unit_price")

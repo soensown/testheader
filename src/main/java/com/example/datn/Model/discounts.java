@@ -14,7 +14,7 @@ import java.util.Date;
 @Setter
 @Entity
 @Table(name = "discounts")
-public class Discounts {
+public class discounts {
     @Id
     private String id;
     @Column(name = "discount_value")

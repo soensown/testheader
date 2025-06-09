@@ -14,11 +14,11 @@ import java.math.BigDecimal;
 @Table(name = "product_materials")
 public class product_materials {
     @EmbeddedId
-    private ProductMaterialId id;
+    private productMaterialId id;
 
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id")
-    private Products product;
+    private products product;
 
     @ManyToOne
     @JoinColumn(name = "material_id", referencedColumnName = "id")

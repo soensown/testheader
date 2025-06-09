@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 @AllArgsConstructor
@@ -17,7 +16,7 @@ import java.util.Date;
 @Table(name = "warehouse_inventory")
 public class warehouse_inventory {
     @EmbeddedId
-    private WarehouseId id;
+    private warehouseId id;
 
     @ManyToOne
     @JoinColumn(name = "product_detail_id",referencedColumnName = "id")

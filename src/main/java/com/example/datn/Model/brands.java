@@ -3,7 +3,6 @@ package com.example.datn.Model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Brands {
+public class brands {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
