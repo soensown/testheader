@@ -31,6 +31,4 @@ public class discounts {
     private String description;
     @Column(name = "condition")
     private Integer condition;
-
-
 }
