@@ -15,7 +15,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-public class ProductMaterialId implements Serializable {
+public class productMaterialId implements Serializable {
     @Column(name = "product_id", insertable = false, updatable = false)
     private String productId;
 

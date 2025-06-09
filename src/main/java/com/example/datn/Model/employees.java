@@ -20,7 +20,7 @@ public class employees {
     private Integer id;
     @OneToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private Users user;
+    private users user;
     @Column(name = "full_name")
     private String fullName;
     @Column(name = "gender")

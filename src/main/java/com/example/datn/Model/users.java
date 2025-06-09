@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Setter
 @Entity
 @Table(name = "users")
-public class Users {
+public class users {
     @Id
     private String id;
     @Column(name = "username")
@@ -42,5 +42,5 @@ public class Users {
     private String updatedBy;
     @ManyToOne
     @JoinColumn(name = "role_id",referencedColumnName = "id")
-    private Roles roles;
+    private roles roles;
 }

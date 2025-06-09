@@ -12,7 +12,7 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "roles")
-public class Roles {
+public class roles {
     @Id
     private String id;
     @Column(name = "role_name")

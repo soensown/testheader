@@ -19,7 +19,7 @@ public class cart_items {
     private String id;
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private Users user;
+    private users user;
     @ManyToOne
     @JoinColumn(name = "product_detail_id",referencedColumnName = "id")
     private product_details product_details;

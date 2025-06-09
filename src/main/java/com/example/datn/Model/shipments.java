@@ -24,7 +24,7 @@ public class shipments {
     private orders order;
     @ManyToOne
     @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private Users users;
+    private users users;
     @Column(name = "shipping_address")
     private String shippingAddress;
     @Column(name = "shipping_method")

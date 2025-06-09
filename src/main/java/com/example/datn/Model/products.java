@@ -15,7 +15,7 @@ import java.util.Date;
 @Setter
 @Entity
 @Table(name = "products")
-public class Products {
+public class products {
     @Id
     private String id;
     @Column(name = "product_name")
@@ -35,7 +35,7 @@ public class Products {
     private Boolean isSpecial;
     @ManyToOne
     @JoinColumn(name = "brand_id",referencedColumnName = "id")
-    private Brands brands;
+    private brands brands;
     @Column(name = "weight")
     private BigDecimal weight;
     @Column(name = "created_date")

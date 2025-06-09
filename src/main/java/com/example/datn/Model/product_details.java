@@ -18,7 +18,7 @@ public class product_details {
     private Integer id;
     @ManyToOne
     @JoinColumn(name = "product_id",referencedColumnName = "id")
-    private Products products;
+    private products products;
     @ManyToOne
     @JoinColumn(name = "color_id",referencedColumnName = "id")
     private colors colors;
