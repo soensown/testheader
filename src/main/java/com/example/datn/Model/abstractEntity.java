@@ -1,7 +1,6 @@
 package com.example.datn.Model;
 
 import jakarta.persistence.*;
-import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -13,7 +12,7 @@ import java.util.Date;
 @Setter
 @MappedSuperclass
 
-public abstract class AbstractEntity {
+public abstract class abstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id")
