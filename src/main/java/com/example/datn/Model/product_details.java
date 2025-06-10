@@ -17,13 +17,13 @@ public class product_details {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne
-    @JoinColumn(name = "product_id",referencedColumnName = "id")
+    @JoinColumn(name = "product_id")
     private products products;
     @ManyToOne
-    @JoinColumn(name = "color_id",referencedColumnName = "id")
+    @JoinColumn(name = "color_id")
     private colors colors;
     @ManyToOne
-    @JoinColumn(name = "size_id",referencedColumnName = "id")
+    @JoinColumn(name = "size_id")
     private sizes sizes;
     @Column(name = "quantity")
     private int quantity;

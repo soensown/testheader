@@ -18,7 +18,7 @@ public class colorsController {
     @GetMapping("/hienThi")
     public String hienThi(Model model){
         model.addAttribute("listColors",colorsRepo.findAll());
-        return "...";//link này mapping fontend file html
+        return "/page/Coler";
     }
 
     @GetMapping("/delete")
