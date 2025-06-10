@@ -33,11 +33,10 @@ public class colorsController {
         return "...";//link này mapping fontend file html
     }
     @GetMapping("/search")
-    public String search(Model model,@RequestParam String tenORma){
-        model.addAttribute("listColors",colorsRepo.findById(id).get());
-        return "...";//link này mapping fontend file html
+    public String search(Model model, @RequestParam String tenORma) {
+        model.addAttribute("listColors", colorsRepo.searchByNameOrCode(tenORma));
+        return "/page/Coler"; // forward đến trang Thymeleaf
     }
-
     @PostMapping("/add")
     public String add(colors colors){
 //        colors.setId(colors.getId());

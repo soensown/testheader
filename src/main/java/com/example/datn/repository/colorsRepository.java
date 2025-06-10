@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface colorsRepository extends JpaRepository<colors, Integer> {
-    @Query("SELECT c FROM colors c where colors.colorName AND c.colorCode like%?1% " )
-    List<colors> findByColorName(String colorName);
+    @Query("SELECT c FROM colors c WHERE c.colorName LIKE %?1% OR c.colorCode LIKE %?1%")
+    List<colors> searchByNameOrCode(String keyword);
 }
