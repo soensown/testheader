@@ -32,9 +32,15 @@ public class colorsController {
         model.addAttribute("listColors",colorsRepo.findById(id).get());
         return "...";//link này mapping fontend file html
     }
+    @GetMapping("/search")
+    public String search(Model model,@RequestParam String tenORma){
+        model.addAttribute("listColors",colorsRepo.findById(id).get());
+        return "...";//link này mapping fontend file html
+    }
 
     @PostMapping("/add")
     public String add(colors colors){
+//        colors.setId(colors.getId());
         colorsRepo.save(colors);
         return "redirect:/colors/hienThi";
     }
