@@ -17,13 +17,14 @@ import java.util.Date;
 @Table(name = "products")
 public class products {
     @Id
+    @Column(name = "product_id")
     private String id;
     @Column(name = "product_name")
     private String productName;
     @Column(name = "description")
     private String description;
     @ManyToOne
-    @JoinColumn(name = "category_id",referencedColumnName = "id")
+    @JoinColumn(name = "category_id")
     private categories categories;
     @Column(name = "discount_price")
     private Long discountPrice;
@@ -34,7 +35,7 @@ public class products {
     @Column(name = "is_special")
     private Boolean isSpecial;
     @ManyToOne
-    @JoinColumn(name = "brand_id",referencedColumnName = "id")
+    @JoinColumn(name = "brand_id")
     private brands brands;
     @Column(name = "weight")
     private BigDecimal weight;

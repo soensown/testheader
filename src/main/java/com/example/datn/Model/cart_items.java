@@ -18,10 +18,10 @@ public class cart_items {
     @Id
     private String id;
     @ManyToOne
-    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    @JoinColumn(name = "user_id")
     private users user;
     @ManyToOne
-    @JoinColumn(name = "product_detail_id",referencedColumnName = "id")
+    @JoinColumn(name = "product_detail_id")
     private product_details product_details;
     @Column(name = "quantity")
     private int quantity;

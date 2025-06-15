@@ -18,10 +18,10 @@ public class orders {
     @Id
     private String id;
     @ManyToOne
-    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    @JoinColumn(name = "user_id")
     private users user;
     @ManyToOne
-    @JoinColumn(name = "discount_id",referencedColumnName = "id")
+    @JoinColumn(name = "discount_id")
     private discounts discount;
     @Column(name = "total_price")
     private BigDecimal totalPrice;

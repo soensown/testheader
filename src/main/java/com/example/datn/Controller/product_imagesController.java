@@ -12,7 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-@RequestMapping("/product_images")
+    @RequestMapping("/product_images")
 public class product_imagesController {
     @Autowired
     product_detailsRepository product_detailsRepo;
@@ -24,7 +24,7 @@ public class product_imagesController {
     public String hienThi(Model model){
         model.addAttribute("listProduct_details",product_detailsRepo.findAll());
         model.addAttribute("listProduct_images",product_imagesRepo.findAll());
-        return "...";//link này mapping fontend file html
+        return "/page/ProductImages";//link này mapping fontend file html
     }
 
     @GetMapping("/delete")

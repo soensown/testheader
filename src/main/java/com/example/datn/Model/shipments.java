@@ -20,10 +20,10 @@ public class shipments {
     private Integer id;
 
     @OneToOne
-    @JoinColumn(name = "order_id",referencedColumnName = "id")
+    @JoinColumn(name = "order_id")
     private orders order;
     @ManyToOne
-    @JoinColumn(name = "user_id",referencedColumnName = "id")
+    @JoinColumn(name = "user_id")
     private users users;
     @Column(name = "shipping_address")
     private String shippingAddress;

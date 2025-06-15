@@ -17,11 +17,11 @@ public class product_materials {
     private productMaterialId id;
 
     @ManyToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id")
+    @JoinColumn(name = "product_id")
     private products product;
 
     @ManyToOne
-    @JoinColumn(name = "material_id", referencedColumnName = "id")
+    @JoinColumn(name = "material_id")
     private material material;
 
     @Column(name = "percentage", precision = 5, scale = 2)

@@ -41,6 +41,6 @@ public class users {
     @Column(name = "updated_by")
     private String updatedBy;
     @ManyToOne
-    @JoinColumn(name = "role_id",referencedColumnName = "id")
+    @JoinColumn(name = "role_id")
     private roles roles;
 }

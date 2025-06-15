@@ -14,17 +14,21 @@ import lombok.Setter;
 @Table(name = "product_details")
 public class product_details {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "product_detail_id")
+    private String id;
+
     @ManyToOne
     @JoinColumn(name = "product_id")
     private products products;
+
     @ManyToOne
     @JoinColumn(name = "color_id")
     private colors colors;
+
     @ManyToOne
     @JoinColumn(name = "size_id")
     private sizes sizes;
+
     @Column(name = "quantity")
     private int quantity;
     @Column(name = "description")

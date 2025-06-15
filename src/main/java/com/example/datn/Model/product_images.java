@@ -14,10 +14,10 @@ import lombok.Setter;
 @Table(name = "product_images")
 public class product_images {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @Column(name = "image_id")
+    private String id;
     @ManyToOne
-    @JoinColumn(name = "product_detail_id", referencedColumnName = "id")
+    @JoinColumn(name = "product_detail_id")
     private product_details product_details;
     @Column(name = "image_url")
     private String image_url;

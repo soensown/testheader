@@ -23,7 +23,7 @@ public class product_detailsController {
     public String hienThi(Model model){
         model.addAttribute("listProduct_details",product_detailsRepo.findAll());
         model.addAttribute("listProduct_images",product_imagesRepo.findAll());
-        return "...";//link này mapping fontend file html
+        return "/page/ProductDetail";//link này mapping fontend file html
     }
 
     @GetMapping("/delete")
