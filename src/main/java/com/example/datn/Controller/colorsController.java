@@ -27,11 +27,6 @@ public class colorsController {
         return "redirect:/colors/hienThi";
     }
 
-    @GetMapping("/update/{id}")
-    public String viewUpdate(Model model,@PathVariable Integer id){
-        model.addAttribute("listColors",colorsRepo.findById(id).get());
-        return "...";//link này mapping fontend file html
-    }
     @GetMapping("/search")
     public String search(Model model, @RequestParam String tenORma) {
         model.addAttribute("listColors", colorsRepo.searchByNameOrCode(tenORma));
@@ -40,6 +35,11 @@ public class colorsController {
     @PostMapping("/add")
     public String add(colors colors){
 //        colors.setId(colors.getId());
+        colorsRepo.save(colors);
+        return "redirect:/colors/hienThi";
+    }
+    @PostMapping("/update")
+    public String update(colors colors){
         colorsRepo.save(colors);
         return "redirect:/colors/hienThi";
     }
